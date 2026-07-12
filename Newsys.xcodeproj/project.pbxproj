@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1BBE25423004393A00A18A51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBE253F3004393A00A18A51 /* ViewController.swift */; };
+		1BBE255430044EEF00A18A51 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBE255330044EEF00A18A51 /* Article.swift */; };
+		1BBE2556300453B600A18A51 /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBE2555300453B600A18A51 /* NewsService.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		1BBE250630041FB800A18A51 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +33,9 @@
 		1BBE24EF30041FB500A18A51 /* Newsys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newsys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BBE250530041FB800A18A51 /* NewsysTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsysTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BBE250F30041FB800A18A51 /* NewsysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsysUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BBE253F3004393A00A18A51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1BBE255330044EEF00A18A51 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		1BBE2555300453B600A18A51 /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -88,6 +97,10 @@
 		1BBE24E630041FB500A18A51 = {
 			isa = PBXGroup;
 			children = (
+				1BBE255230044DE300A18A51 /* Services */,
+				1BBE255130044DC800A18A51 /* ViewModels */,
+				1BBE255030044DBB00A18A51 /* ViewControllers */,
+				1BBE254F30044D9200A18A51 /* Models */,
 				1BBE24F130041FB500A18A51 /* Newsys */,
 				1BBE250830041FB800A18A51 /* NewsysTests */,
 				1BBE251230041FB800A18A51 /* NewsysUITests */,
@@ -103,6 +116,37 @@
 				1BBE250F30041FB800A18A51 /* NewsysUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1BBE254F30044D9200A18A51 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1BBE255330044EEF00A18A51 /* Article.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1BBE255030044DBB00A18A51 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1BBE253F3004393A00A18A51 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1BBE255130044DC800A18A51 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1BBE255230044DE300A18A51 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1BBE2555300453B600A18A51 /* NewsService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +293,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BBE2556300453B600A18A51 /* NewsService.swift in Sources */,
+				1BBE255430044EEF00A18A51 /* Article.swift in Sources */,
+				1BBE25423004393A00A18A51 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
