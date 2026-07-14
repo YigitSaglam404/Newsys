@@ -8,25 +8,59 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    private var articles: [Article] = []
+    private let newsService = NewsService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        testFetchNews()
+        title = "Newsys"
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        loadNews()
     }
 
-    private func testFetchNews() {
-        Task {
-            do {
-                let service = NewsService()
-                let articles = try await service.fetchTopHeadlines()
-                print("Toplam \(articles.count) haber geldi")
-                for article in articles {
-                    print("- \(article.title)")
+    private func loadNews() {
+            Task {
+                do {
+                    let fetchedArticles = try await newsService.fetchTopHeadlines()
+                    articles = fetchedArticles
+                    collectionView.reloadData()
+                } catch {
+                    print("Hata oluştu: \(error)")
                 }
-            } catch {
-                print("Hata oluştu: \(error)")
             }
         }
     }
+
+    extension ViewController: UICollectionViewDataSource {
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return articles.count
+        }
+
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewsCell", for: indexPath) as? NewsCell else {
+                return UICollectionViewCell()
+            }
+            let article = articles[indexPath.item]
+            cell.configure(with: article)
+            return cell
+        }
+    }
+
+    extension ViewController: UICollectionViewDelegateFlowLayout {
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            let width = collectionView.frame.width - 16
+            return CGSize(width: width, height: 220)
+        }
+
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+            return UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        }
+
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+            return 16
+        }
 }
 
