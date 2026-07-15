@@ -63,4 +63,17 @@ class ViewController: UIViewController {
             return 16
         }
 }
+    extension ViewController: UICollectionViewDelegate {
+        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            collectionView.deselectItem(at: indexPath, animated: true)
 
+            let selectedArticle = articles[indexPath.item]
+
+            guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else {
+                return
+            }
+
+            detailVC.article = selectedArticle
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
+}
