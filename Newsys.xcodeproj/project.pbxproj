@@ -15,6 +15,10 @@
 		1BBE255C300BDA1E00A18A51 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1BBE255B300BDA1E00A18A51 /* GoogleService-Info.plist */; };
 		1BBE255F300BDBCD00A18A51 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1BBE255E300BDBCD00A18A51 /* FirebaseAuth */; };
 		1BBE2561300BDBCD00A18A51 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1BBE2560300BDBCD00A18A51 /* FirebaseFirestore */; };
+		1BBE2563300C552C00A18A51 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBE2562300C552C00A18A51 /* AuthService.swift */; };
+		1BBE2565300C5A7400A18A51 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBE2564300C5A7400A18A51 /* LoginViewController.swift */; };
+		1BBE2567300C6A2200A18A51 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBE2566300C6A2200A18A51 /* ProfileViewController.swift */; };
+		1BBE2569300C7A1500A18A51 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBE2568300C7A1500A18A51 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		1BBE255730045D2400A18A51 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		1BBE2559300700C800A18A51 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1BBE255B300BDA1E00A18A51 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1BBE2562300C552C00A18A51 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		1BBE2564300C5A7400A18A51 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1BBE2566300C6A2200A18A51 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1BBE2568300C7A1500A18A51 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -143,6 +151,9 @@
 				1BBE253F3004393A00A18A51 /* ViewController.swift */,
 				1BBE255730045D2400A18A51 /* NewsCell.swift */,
 				1BBE2559300700C800A18A51 /* DetailViewController.swift */,
+				1BBE2564300C5A7400A18A51 /* LoginViewController.swift */,
+				1BBE2566300C6A2200A18A51 /* ProfileViewController.swift */,
+				1BBE2568300C7A1500A18A51 /* RegisterViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -158,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				1BBE2555300453B600A18A51 /* NewsService.swift */,
+				1BBE2562300C552C00A18A51 /* AuthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -312,11 +324,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BBE2565300C5A7400A18A51 /* LoginViewController.swift in Sources */,
+				1BBE2569300C7A1500A18A51 /* RegisterViewController.swift in Sources */,
 				1BBE2556300453B600A18A51 /* NewsService.swift in Sources */,
+				1BBE2567300C6A2200A18A51 /* ProfileViewController.swift in Sources */,
 				1BBE255430044EEF00A18A51 /* Article.swift in Sources */,
 				1BBE25423004393A00A18A51 /* ViewController.swift in Sources */,
 				1BBE255830045D2400A18A51 /* NewsCell.swift in Sources */,
 				1BBE255A300700C800A18A51 /* DetailViewController.swift in Sources */,
+				1BBE2563300C552C00A18A51 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
